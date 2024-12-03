@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <title>Dashboard</title>
+</head>
+
+<body>
+
+  <!-- MENU SUPERIOR -->
+  <div class="bg-slate-900 p-4 min-h-24 flex items-center">
+    <div class="container mx-auto flex justify-between w-full">
+      <a href="/index.html"><img src="../assets/logo-petx-branco.svg" alt=""></a>
+
+      <ul class=" list-none text-sm flex items-center gap-12">
+        <li class="text-white hover:text-indigo-400 hover:underline hover:transition-all duration-500" href="#">Painel
+          Principal</li>
+        <li class="text-white hover:text-indigo-400 hover:underline hover:transition-all duration-500" href="#">
+          Animais
+        </li>
+        <li class="text-white hover:text-indigo-400 hover:underline hover:transition-all duration-500" href="#">
+          Estoque
+        </li>
+        <li class="text-white hover:text-indigo-400 hover:underline hover:transition-all duration-500" href="#">
+          Configurações</li>
+        <li class="text-white hover:text-indigo-400 hover:underline hover:transition-all duration-500" href="#">
+          Sair</a>
+      </ul>
+    </div>
+  </div>
+
+  <!-- BLOCOS DASHBOARD EM GRID -->
+  <div class="h-[calc(100vh-96px)] flex items-center">
+    <div class="grid grid-cols-2 gap-4 container mx-auto">
+      <div class="bg-slate-50 p-20 rounded-2xl flex flex-col items-center gap-8">
+        <img src="../assets/icon-dog.svg" alt="">
+
+        <div class="flex flex-col gap-2">
+          <h2 class="rounded-full px-2 py-1 bg-indigo-600 text-white text-center">Cachorro</h2>
+          <p><span class="text-">212</span> cachorros cadastrados</p>
+          <p><span>298</span>kg de ração no estoque</p>
+        </div>
+
+        <p>Temos ração para os cachorros por <span>12</span> dias</p>
+      </div>
+      <div class="bg-slate-50 p-20 rounded-2xl">Bloco 2</div>
+      <div class="bg-slate-50 p-20 rounded-2xl">Bloco 3</div>
+      <div class="bg-slate-50 p-20 rounded-2xl">Bloco 4</div>
+    </div>
+  </div>
+</body>
+
+</html>

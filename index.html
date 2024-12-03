@@ -1,112 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-    <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <title></title>
 </head>
 
 <body>
-    <button
-        class=" rounded-2xl bg-indigo-600 hover:bg-indigo-700 focus:outline-indigo-700 font-medium outline-indigo-500 text-base px-6 py-3 min-h-11 text-white outline outline-1  d-flex gap-2.5 itens-center  ">
-        <i class="ph ph-paper-plane-tilt"></i>
-        <span>Button</span>
-    </button>
+  <div class="flex h-screen flex-col md:flex-row">
+    <div class="bg-indigo-50 h-screen w-full sm:w-full md:w-2/4 lg:w-1/4 p-8 flex items-center justify-center">
+      <div class="rounded-2xl bg-white flex flex-col px-8 py-12 gap-4 items-center">
 
-    <button
-        class=" rounded-2xl bg-white text-sm outline-indigo-500 text-red-600 px-6 py-3 min-h-11 text-red-600 hover:border-red-600 hover:bg-red-600 hover:text-white hover:border-red-300 border border-2 border-slate-300 d-flex gap-2.5 itens-center font-medium ">
-        <i class="ph ph-paper-plane-tilt"></i>
-        <span>Button Primary</span>
-    </button>
-    <button
-        class=" rounded-2xl bg-white text-sm outline-indigo-500 hover:bg-slate-200 text-slate-900 px-6 py-3 min-h-11 text-slate-900 border border-2 border-slate-300 d-flex gap-2.5 itens-center font-medium ">
-        <i class="ph ph-paper-plane-tilt"></i>
-        <span>Button Primary</span>
-    </button>
-    <button
-        class=" rounded-2xl bg-white text-sm outline-indigo-500 text-red-600 px-6 py-3 min-h-11 text-slate-300 border border-2 border-slate-300 d-flex gap-2.5 itens-center font-medium cursor-not-allowed "
-        disabled>
-        <i class="ph ph-paper-plane-tilt"></i>
-        <span>Button Primary</span>
-    </button>
+        <img src="/assets/logo-petx.svg" class="max-w-44" alt="">
 
-    <br>
-    <br>
-    <br>
+        <h1 class="text-xl">Faça o login</h1>
 
+        <form action="" class="flex flex-col gap-4">
+          <input type="email" placeholder="Digite seu e-mail"
+            class="w-full py-3 px-6 rounded-2xl border border-1 border-slate-400 focus:outline-indigo-600">
+          </input>
+          <input type="password" placeholder="Digite sua senha"
+            class="w-full py-3 px-6 rounded-2xl border border-1 border-slate-400 focus:outline-indigo-600">
+          </input>
+          <button type="submit"
+            class="w-full rounded-2xl bg-indigo-600 hover:bg-indigo-700 txt-xs focus:outline-indigo-700 font-medium outline-indigo-500 text-base px-6 py-3 min-h-9 text-white outline outline-1  d-flex gap-2.5 itens-center text-sm  ">
+            <i class="ph ph-sign-in"></i>
+            <span>Entrar</span>
+          </button>
+        </form>
+        <a href="#" class="underline text-xs text-slate-500">Esqueceu a senha?</a>
 
-    <button
-        class=" rounded-2xl bg-indigo-600 hover:bg-indigo-700 txt-xs focus:outline-indigo-700 font-medium outline-indigo-500 text-base px-6 py-3 min-h-9 text-white outline outline-1  d-flex gap-2.5 itens-center text-sm  ">
-        <i class="ph ph-paper-plane-tilt"></i>
-        <span>Button</span>
-    </button>
-
-    <button
-        class=" rounded-2xl bg-white text-sm outline-indigo-500 text-red-600 px-6 py-3 min-h-9 text-red-600 hover:border-red-600 hover:bg-red-600 hover:text-white hover:border-red-300 border border-2 border-slate-300 d-flex gap-2.5 itens-center font-medium ">
-        <i class="ph ph-paper-plane-tilt"></i>
-        <span>Button Primary</span>
-    </button>
-    <button
-        class=" rounded-2xl bg-white text-sm outline-indigo-500 hover:bg-slate-200 text-slate-900 text-red-600 px-6 py-2 min-h-9 text-slate-900 border border-2 border-slate-300 d-flex gap-2.5 itens-center font-medium text-sm ">
-        <i class="ph ph-paper-plane-tilt"></i>
-        <span>Button Primary</span>
-    </button>
-    <button
-        class=" rounded-2xl bg-white text-sm outline-indigo-500 text-red-600 px-6 py-2 min-h-9 text-slate-300 border border-2 border-slate-300 d-flex gap-2.5 itens-center font-medium cursor-not-allowed text-sm  "
-        disabled>
-        <i class="ph ph-paper-plane-tilt"></i>
-        <span>Button Primary</span>
-
-
-
-    </button>
-
-    <br>
-    <br>
-    <br>
-    <input type="text" class="py-3 px-6 rounded-2xl border border-1 border-slate-400 focus:outline-indigo-600">Padrão
-    </input>
-    <input type="text"
-        class="py-3 px-6 rounded-2xl border border-1 border-red-400 focus:outline-red-600 text-red-500">Erro</input>
-
-    <select type="text" class="py-3 px-6 rounded-2xl border border-1 border-green-400 focus:outline-green-600">
-        <option value="opcao">Opção 1</option>
-        <option value="opcao">Opção 2</option>
-        <option value="opcao">Opção 3</option>
-        <option value="opcao">Opção 4</option>
-    </select>
-
-    <textarea name="" class="py-3 px-6 rounded-2xl border border-1 border-green-400 focus:outline-green-600"
-        id=""></textarea>
-
-    <br><br>
-
-    <div>
-
-        <input type="radio" name="group" class="accent-indigo-600 h-5 w-5">
-        <input type="radio" name="group" class="accent-indigo-600 h-5 w-5 gap-2.5" checked>
-        <br>
-        <input type="radio" name="group" class="accent-indigo-600 h-5 w-5 " disabled>
-
-        <label for="radio1"></label>
+      </div>
     </div>
 
-    <div>
-        <input type="checkbox" name="" class="accent-indigo-600 h-5 w-5">
-        <input type="checkbox" name="" class="accent-indigo-600 h-5 w-5 gap-2.5" checked>
-        <br>
-        <input type="checkbox" name="" class="accent-indigo-600 h-5 w-5" disabled>
+    <div class="flex items-center justify-center hidden p-20 sm:flex sm:w-full md:w-2/4 lg:w-3/4">
+      <img src="/assets/icon-cat.svg" alt="">
     </div>
 
-
-
-
-
-
-
+  </div>
 
 </body>
 
