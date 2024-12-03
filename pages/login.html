@@ -15,8 +15,8 @@
 </head>
 
 <body>
-  <div class="flex h-screen">
-    <div class="bg-indigo-50 h-full w-1/4 p-8 flex items-center justify-center">
+  <div class="flex h-screen flex-col md:flex-row">
+    <div class="bg-indigo-50 h-screen w-full sm:w-full md:w-2/4 lg:w-1/4 p-8 flex items-center justify-center">
       <div class="rounded-2xl bg-white flex flex-col px-8 py-12 min-w-40 gap-4 items-center">
 
         <img src="/assets/logo-petx.svg" class="max-w-44" alt="">
@@ -24,10 +24,10 @@
         <h1 class="text-xl">Faça o login</h1>
 
         <input type="text" placeholder="Digite seu e-mail"
-          class="py-3 px-6 rounded-2xl border border-1 border-slate-400 focus:outline-indigo-600">
+          class="w-full py-3 px-6 rounded-2xl border border-1 border-slate-400 focus:outline-indigo-600">
         </input>
         <input type="password" placeholder="Digite sua senha"
-          class="py-3 px-6 rounded-2xl border border-1 border-slate-400 focus:outline-indigo-600">
+          class="w-full py-3 px-6 rounded-2xl border border-1 border-slate-400 focus:outline-indigo-600">
         </input>
         <button
           class="w-full rounded-2xl bg-indigo-600 hover:bg-indigo-700 txt-xs focus:outline-indigo-700 font-medium outline-indigo-500 text-base px-6 py-3 min-h-9 text-white outline outline-1  d-flex gap-2.5 itens-center text-sm  ">
@@ -40,8 +40,8 @@
       </div>
     </div>
 
-    <div>
-      Login image
+    <div class="flex items-center justify-center w-full p-20 sm:w-full md:w-2/4 lg:w-3/4">
+      <img src="/assets/icon-cat.svg" class="" alt="">
     </div>
 
   </div>
