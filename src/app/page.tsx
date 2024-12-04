@@ -23,14 +23,14 @@ export default function Login() {
               type="password"
               icon="password"
             />
-            <Button type="submit" text="Entrar" />
+            <Button type="submit" text="Entrar" icon="SignIn" />
           </form>
           <Link href="#" className="text-base text-slate-500 underline">
             Esqueceu a senha?
           </Link>
         </div>
       </div>
-      <div className="hidden rounded-2xl sm:w-full md:w-2/4 lg:flex lg:w-full lg:items-center lg:justify-center">
+      <div className="hidden sm:w-full md:w-2/4 lg:flex lg:w-full lg:items-center lg:justify-center">
         <Image src={CatIcon} alt="" />
       </div>
     </div>
