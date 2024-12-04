@@ -12,8 +12,16 @@ export default function Login() {
 
           <h1 className="text-xl">Faça o login</h1>
           <form action="" className="flex flex-col gap-8">
-            <TextField placeholder="Digite Seu Email" type="email" />
-            <TextField placeholder="Digite Sua Senha" type="password" />
+            <TextField
+              placeholder="Digite Seu Email"
+              type="email"
+              icon="email"
+            />
+            <TextField
+              placeholder="Digite Sua Senha"
+              type="password"
+              icon="password"
+            />
             <button
               type="submit"
               className="txt-xs d-flex itens-center min-h-9 w-full gap-2.5 rounded-2xl bg-indigo-600 px-6 py-3 text-base font-medium text-white outline outline-1 outline-indigo-500 hover:bg-indigo-700 focus:outline-indigo-700"
