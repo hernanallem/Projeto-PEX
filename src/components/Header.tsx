@@ -1,10 +1,29 @@
+"use client"; // Adicione isso no topo do arquivo para usar hooks do React
 import Image from "next/image";
-import React from "react";
-import Logo from "../../assets/logo.svg";
+import React, { useState, useEffect } from "react";
+import Logo from "../assets/logo-petx.svg";
 import Link from "next/link";
+import { useRouter } from "next/navigation"; // Para redirecionamento
 
 export const Header = () => {
-  const User = "pierre";
+  const [user, setUser] = useState<string | null>(null); // Estado para armazenar o usuário autenticado
+  const router = useRouter(); // Hook para redirecionamento
+
+  // Simulação de verificação de autenticação (substitua pela lógica real)
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user"); // Verifica se há um usuário no localStorage
+    if (storedUser) {
+      setUser(storedUser); // Define o usuário autenticado
+    }
+  }, []);
+
+  // Função para fazer logout
+  const handleLogout = () => {
+    localStorage.removeItem("user"); // Remove o usuário do localStorage
+    localStorage.removeItem("token"); // Remove o token de autenticação (se houver)
+    setUser(null); // Atualiza o estado para refletir que o usuário não está mais autenticado
+    router.push("/login"); // Redireciona para a página de login
+  };
 
   return (
     <>
@@ -37,17 +56,17 @@ export const Header = () => {
               >
                 Configurações
               </Link>
-              {User === "pierre" ? (
-                <Link
+              {user ? ( // Verifica se o usuário está autenticado
+                <button
+                  onClick={handleLogout} // Chama a função de logout
                   className="text-white duration-500 hover:text-indigo-400 hover:underline hover:transition-all"
-                  href="/login"
                 >
                   Sair
-                </Link>
+                </button>
               ) : (
                 <Link
                   className="text-white duration-500 hover:text-indigo-400 hover:underline hover:transition-all"
-                  href="/logout"
+                  href="/login"
                 >
                   Login
                 </Link>

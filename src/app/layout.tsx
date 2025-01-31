@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { Header } from "../components/header/Header";
 
 const geistInter = localFont({
   src: "../../src/app/fonts/Inter-VariableFont_opsz,wght.ttf",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
+// const user = "pierre";
+/**TODO:Puxar validação de autenticação do usuário */
 
 export const metadata: Metadata = {
   title: "Projeto Petx",
@@ -24,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body className={`${geistInter.variable} antialiased`}>
-        <Header />
+        {/* {user === "pierre" ? <Header /> : null}  TODO: Implementar autenticação*/}
         {children}
       </body>
     </html>
