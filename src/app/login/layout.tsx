@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
-import { Header } from "../components/header/Header";
+import "../globals.css";
 
 const geistInter = localFont({
-  src: "../../src/app/fonts/Inter-VariableFont_opsz,wght.ttf",
-  variable: "--font-geist-sans",
+  src: "../fonts/Inter-VariableFont_opsz,wght.ttf",
+  variable: "--font-geist-inter",
   weight: "100 900",
 });
 
@@ -22,11 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-br">
-      <body className={`${geistInter.variable} antialiased`}>
-        <Header />
-        {children}
-      </body>
+    <html lang="en">
+      <body className={`${geistInter.variable} antialiased`}>{children}</body>
     </html>
   );
 }
