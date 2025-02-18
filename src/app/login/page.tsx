@@ -54,9 +54,6 @@ export default function Login() {
             {error && <p className="text-red-500">{error}</p>}
             <Button type="submit" text="Entrar" icon="SignIn" />
           </form>
-          <Link href="/registro" className="text-base text-slate-500">
-            Não possui uma conta? <u>Cadastre-se</u>
-          </Link>
           <Link href="#" className="text-base text-slate-500 underline">
             Esqueceu a senha?
           </Link>

@@ -1,7 +1,7 @@
 "use client"; // Adicione isso no topo do arquivo para usar hooks do React
 import Image from "next/image";
 import React, { useState, useEffect } from "react";
-import Logo from "../assets/logo-petx.svg";
+import Logo from "../assets/logo.svg";
 import Link from "next/link";
 import { useRouter } from "next/navigation"; // Para redirecionamento
 
@@ -40,7 +40,7 @@ export const Header = () => {
               </Link>
               <Link
                 className="text-white duration-500 hover:text-indigo-400 hover:underline hover:transition-all"
-                href="/Animais"
+                href="/animais"
               >
                 Animais
               </Link>
