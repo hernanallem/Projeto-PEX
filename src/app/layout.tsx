@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -8,14 +7,9 @@ const geistInter = localFont({
   weight: "100 900",
 });
 
-// const user = "pierre";
-/**TODO:Puxar validação de autenticação do usuário */
-
-export const metadata: Metadata = {
+export const metadata = {
   title: "Projeto Petx",
-  description: `Um sistema de gerenciamento interno para uma ONG de abrigo animal. O sistema vai contar com login, página de dashboard, paginas de cadastro e gerenciamento dos animais.
-  <br>
-  É um projeto de extensão da faculdade, sendo desenvolvido em grupo.`,
+  description: `Um sistema de gerenciamento interno para uma ONG de abrigo animal.`,
 };
 
 export default function RootLayout({
@@ -25,10 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${geistInter.variable} antialiased`}>
-        {/* {user === "pierre" ? <Header /> : null}  TODO: Implementar autenticação*/}
-        {children}
-      </body>
+      <head>
+        <link rel="icon" type="image/svg+xml" href="/icon-cat.svg" />
+      </head>
+      <body className={`${geistInter.variable} antialiased`}>{children}</body>
     </html>
   );
 }
