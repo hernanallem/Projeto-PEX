@@ -24,7 +24,7 @@ export const authOptions: NextAuthOptions = {
             },
           );
 
-          const { token, expiration } = response.data;
+          const { token, expiration, nome, id } = response.data;
 
           if (!token) {
             throw new Error("Token não recebido");
@@ -32,8 +32,8 @@ export const authOptions: NextAuthOptions = {
 
           // Retorne o objeto user com as propriedades personalizadas
           return {
-            id: "user-id", // Substitua por um ID real se disponível
-            name: "Usuário", // Substitua por um nome real se disponível
+            id: id, // Substitua por um ID real se disponível
+            name: nome, // Substitua por um nome real se disponível
             email: credentials.email,
             token, // Token JWT
             expiration, // Tempo de expiração
