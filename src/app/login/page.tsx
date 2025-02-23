@@ -15,26 +15,29 @@ export default function Login() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
-    // Limpa mensagens de erro anteriores
-    setError(null);
+    setError(null); // Limpa mensagens de erro anteriores
 
     try {
-      // Chama o método signIn do NextAuth.js para autenticar o usuário
       const result = await signIn("credentials", {
-        redirect: false, // Impede o redirecionamento automático
+        redirect: false, // Evita redirecionamento automático
         email,
         password,
+        callbackUrl: "/", // Define um redirecionamento explícito
       });
 
       if (result?.error) {
-        setError(result.error); // Exibe o erro retornado pela API
+        console.error("Erro no login:", result.error);
+        setError(result.error); // Exibe erro retornado pela API
       } else {
-        window.location.href = "/"; // Redireciona após o login bem-sucedido
+        window.location.href = "/"; // Redireciona após login bem-sucedido
       }
-    } catch (err) {
-      console.error("Erro ao fazer login:", err);
-      setError("Ocorreu um erro inesperado. Tente novamente.");
+    } catch (err: unknown) {
+      console.error("Erro inesperado:", err);
+      setError(
+        typeof err === "string"
+          ? err
+          : "Ocorreu um erro inesperado. Tente novamente.",
+      );
     }
   };
 
