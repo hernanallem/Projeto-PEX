@@ -27,38 +27,48 @@ export const Header = () => {
 
   return (
     <>
-      <main className="flex justify-center">
-        <header className="flex w-full items-center justify-around bg-background p-6 text-white">
-          <Image src={Logo} alt={""} />
-          <nav>
-            <ul className="flex list-none items-center gap-4 text-sm md:gap-12">
+      <div className="flex min-h-24 items-center bg-slate-900 p-4">
+        <div className="container mx-auto flex w-full flex-col items-center justify-between gap-3 md:flex md:flex-row">
+          <Link href="/">
+            <Image src={Logo} alt="Logo" />
+          </Link>
+          <ul className="flex list-none items-center gap-4 text-sm md:gap-12">
+            <li>
               <Link
                 className="text-white duration-500 hover:text-indigo-400 hover:underline hover:transition-all"
                 href="/"
               >
                 Painel Principal
               </Link>
+            </li>
+            <li>
               <Link
                 className="text-white duration-500 hover:text-indigo-400 hover:underline hover:transition-all"
                 href="/animais"
               >
                 Animais
               </Link>
+            </li>
+            <li>
               <Link
                 className="text-white duration-500 hover:text-indigo-400 hover:underline hover:transition-all"
                 href="/estoque"
               >
                 Estoque
               </Link>
+            </li>
+            <li>
               <Link
                 className="text-white duration-500 hover:text-indigo-400 hover:underline hover:transition-all"
                 href="/configuracoes"
               >
                 Configurações
               </Link>
-              {user ? ( // Verifica se o usuário está autenticado
+            </li>
+            <li>
+              {user ? (
                 <button
-                  onClick={handleLogout} // Chama a função de logout
+                  onClick={handleLogout}
                   className="text-white duration-500 hover:text-indigo-400 hover:underline hover:transition-all"
                 >
                   Sair
@@ -71,10 +81,10 @@ export const Header = () => {
                   Login
                 </Link>
               )}
-            </ul>
-          </nav>
-        </header>
-      </main>
+            </li>
+          </ul>
+        </div>
+      </div>
     </>
   );
 };

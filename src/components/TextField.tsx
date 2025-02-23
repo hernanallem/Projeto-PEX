@@ -6,7 +6,7 @@ interface TextFieldProps {
   placeholder: string;
   type: "text" | "password" | "email";
   icon?: "email" | "password" | "Save";
-  value: string;
+  value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 

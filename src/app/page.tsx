@@ -10,10 +10,10 @@ import {
 
 export default function Login() {
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex flex-col">
       <Header />
-      <div className="flex min-h-[960px] items-center">
-        <div className="container mx-auto grid grid-cols-1 gap-4 md:grid-cols-2">
+      <div className="flex min-h-[960px] items-center px-2 py-20">
+        <div className="container mx-auto grid grid-cols-1 gap-4 lg:grid-cols-2">
           {/* Card Cachorros */}
           <div className="flex flex-col items-center gap-8 rounded-2xl bg-slate-50 py-10 text-center">
             <div className="flex min-w-40 flex-col items-center justify-center gap-4">
