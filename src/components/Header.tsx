@@ -48,6 +48,9 @@ export const Header = () => {
                 Configurações
               </Link>
             </li>
+            <li className="text-white duration-500 hover:text-indigo-400 hover:underline hover:transition-all">
+              {`Olá, ${session?.user?.name}`}
+            </li>
             <li>
               {session ? (
                 <button

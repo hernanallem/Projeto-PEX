@@ -24,16 +24,19 @@ export const authOptions: NextAuthOptions = {
             },
           );
 
-          const user = response.data;
+          const { token, expiration } = response.data;
 
-          if (!user) {
-            throw new Error("Usuário não encontrado ou senha inválida");
+          if (!token) {
+            throw new Error("Token não recebido");
           }
 
+          // Retorne o objeto user com as propriedades personalizadas
           return {
-            id: String(user.id),
-            name: user.name,
-            email: user.email,
+            id: "user-id", // Substitua por um ID real se disponível
+            name: "Usuário", // Substitua por um nome real se disponível
+            email: credentials.email,
+            token, // Token JWT
+            expiration, // Tempo de expiração
           };
         } catch (error) {
           console.error("Erro ao autenticar:", error);
@@ -49,16 +52,20 @@ export const authOptions: NextAuthOptions = {
   callbacks: {
     async jwt({ token, user }) {
       if (user) {
+        // Adicione as propriedades personalizadas ao token JWT
         return {
           ...token,
           id: user.id,
           name: user.name,
           email: user.email,
+          token: user.token, // Token JWT
+          expiration: user.expiration, // Tempo de expiração
         };
       }
       return token;
     },
     async session({ session, token }) {
+      // Adicione as propriedades personalizadas à sessão
       return {
         ...session,
         user: {
@@ -66,12 +73,14 @@ export const authOptions: NextAuthOptions = {
           id: token.id,
           name: token.name,
           email: token.email,
+          token: token.token, // Token JWT
+          expiration: token.expiration, // Tempo de expiração
         },
       };
     },
   },
 };
 
-// 🔥 Exportando os métodos GET e POST corretamente para o App Router
+// Exportando os métodos GET e POST corretamente para o App Router
 const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };
