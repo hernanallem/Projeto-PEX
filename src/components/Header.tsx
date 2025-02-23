@@ -1,11 +1,12 @@
 "use client"; // Adicione isso no topo do arquivo para usar hooks do React
 import Image from "next/image";
 import React from "react";
+import { useSession, signOut } from "next-auth/react";
 import Logo from "../assets/logo.svg";
 import Link from "next/link";
 
 export const Header = () => {
-  const user = null; // Replace this with actual user state or context
+  const { data: session } = useSession();
 
   return (
     <>
@@ -48,9 +49,9 @@ export const Header = () => {
               </Link>
             </li>
             <li>
-              {user ? (
+              {session ? (
                 <button
-                  onClick={() => alert("Sair")}
+                  onClick={() => signOut()}
                   className="text-white duration-500 hover:text-indigo-400 hover:underline hover:transition-all"
                 >
                   Sair
