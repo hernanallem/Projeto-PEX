@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <title></title>
+</head>
+
+<body>
+  <div class="flex h-screen flex-col md:flex-row">
+    <div class="bg-indigo-50 h-screen w-full sm:w-full md:w-2/4 lg:w-1/4 p-8 flex items-center justify-center">
+      <div class="rounded-2xl bg-white flex flex-col px-8 py-12 gap-4 items-center">
+
+        <img src="/assets/logo-petx.svg" class="max-w-44" alt="">
+
+        <h1 class="text-xl">Faça o login</h1>
+
+        <form action="/dashboard/index.html" class="flex flex-col gap-4">
+          <input type="email" placeholder="Digite seu e-mail"
+            class="w-full py-3 px-6 rounded-2xl border border-1 border-slate-400 focus:outline-indigo-600">
+          </input>
+          <input type="password" placeholder="Digite sua senha"
+            class="w-full py-3 px-6 rounded-2xl border border-1 border-slate-400 focus:outline-indigo-600">
+          </input>
+          <button type="submit"
+            class="w-full rounded-2xl bg-indigo-600 hover:bg-indigo-700 txt-xs focus:outline-indigo-700 font-medium outline-indigo-500 text-base px-6 py-3 min-h-9 text-white outline outline-1  d-flex gap-2.5 itens-center text-sm  ">
+            <i class="ph ph-sign-in"></i>
+            <span>Entrar</span>
+          </button>
+        </form>
+        <a href="#" class="underline text-xs text-slate-500">Esqueceu a senha?</a>
+
+      </div>
+    </div>
+
+    <div class="flex items-center justify-center hidden p-20 sm:flex sm:w-full md:w-2/4 lg:w-3/4">
+      <img src="/assets/icon-cat.svg" alt="">
+    </div>
+
+  </div>
+
+</body>
+
+</html>

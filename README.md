@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,25 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+=======
+<<<<<<< HEAD
+
+# FrontEnd - Petx
+
+Um sistema de gerenciamento interno para uma ONG de abrigo animal. O sistema vai contar com login, página de dashboard, paginas de cadastro e gerenciamento dos animais.
+
+É um projeto de extensão da faculdade, sendo desenvolvido em grupo.
+
+
+
+## Finalizado
+
+![App Screenshot](https://i.imgur.com/o4OlS0Q.png)
+
+![App Screenshot](https://i.imgur.com/qzLMgMt.png)
+
+
+=======
+# BackEnd-Petx
+>>>>>>> f8081a853fd41fbbb32830c6a3e6b5c5dc68afe6
+>>>>>>> 72809e6ca2204230ac559ba335e81135b8051744

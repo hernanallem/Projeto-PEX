@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../main.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+  <title>Dashboard</title>
+</head>
+
+<body>
+
+  <!-- MENU SUPERIOR -->
+  <div class="bg-slate-900 p-4 min-h-24 flex items-center">
+    <div class="container mx-auto flex flex-col gap-3 items-center md:flex md:flex-row justify-between w-full">
+      <a href="/index.html"><img src="../assets/logo-petx-branco.svg" alt=""></a>
+
+      <ul class=" list-none text-sm flex items-center gap-4 md:gap-12">
+        <li class="text-white hover:text-indigo-400 hover:underline hover:transition-all duration-500" href="#">Painel
+          Principal</li>
+        <li class="text-white hover:text-indigo-400 hover:underline hover:transition-all duration-500" href="#">
+          Animais
+        </li>
+        <li class="text-white hover:text-indigo-400 hover:underline hover:transition-all duration-500" href="#">
+          Estoque
+        </li>
+        <li class="text-white hover:text-indigo-400 hover:underline hover:transition-all duration-500" href="#">
+          Configurações</li>
+        <li class="text-white hover:text-indigo-400 hover:underline hover:transition-all duration-500" href="#">
+          Sair</a>
+      </ul>
+    </div>
+  </div>
+
+  <!-- BLOCOS DASHBOARD EM GRID -->
+  <div class="min-h-[960px] py-20 px-2 flex items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 container mx-auto">
+      <div class="bg-slate-50 py-10 rounded-2xl flex flex-col items-center gap-8 text-center">
+
+        <div class="flex flex-col gap-2 min-w-40">
+          <img src="../assets/icon-dog.svg" alt="">
+          <h2 class="rounded-full px-2 py-1 bg-indigo-600 text-white w-full">Cachorros</h2>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <p><span class="font-bold">212</span> cachorros cadastrados</p>
+          <p><span class="font-bold">298kg</span> de ração no estoque</p>
+        </div>
+
+        <p>Temos ração para os cachorros por <span class="font-bold">12</span> dias</p>
+
+      </div>
+      <div class="bg-slate-50 py-10 rounded-2xl flex flex-col items-center gap-8 text-center">
+
+        <div class="flex flex-col gap-2 min-w-40">
+          <img src="../assets/icon-cat-red.svg" alt="">
+          <h2 class="rounded-full px-2 py-1 bg-red-400 text-white w-full">Gatos</h2>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <p><span class="font-bold">212</span> gatos cadastrados</p>
+          <p><span class="font-bold">298kg</span> de ração no estoque</p>
+        </div>
+
+        <p>Temos ração para os gatos por <span class="font-bold">12</span> dias</p>
+
+      </div>
+      <div class="bg-slate-50 py-10 px-8 md:px-12 rounded-2xl flex flex-col gap-8">
+        <h2 class="text-lg font-semibold">Últimos Gastos Clínicos</h2>
+        <ul class="divide-y divide-slate-300">
+          <li class="flex gap-2 py-3">
+            <span class="text-red-400 w-1/5">-R$900</span>
+            <span class="w-4/5">Descricao do Gasto</span>
+          </li>
+          <li class="flex gap-2 py-3">
+            <span class="text-red-400 w-1/5">-R$900</span>
+            <span class="w-4/5">Descricao do Gasto</span>
+          </li>
+          <li class="flex gap-2 py-3">
+            <span class="text-red-400 w-1/5">-R$900</span>
+            <span class="w-4/5">Descricao do Gasto</span>
+          </li>
+          <li class="flex gap-2 py-3">
+            <span class="text-red-400 w-1/5">-R$900</span>
+            <span class="w-4/5">Descricao do Gasto</span>
+          </li>
+          <li class="flex gap-2 py-3">
+            <span class="text-red-400 w-1/5">-R$900</span>
+            <span class="w-4/5">Descricao do Gasto</span>
+          </li>
+          <li class="flex gap-2  py-3">
+            <span class="text-red-400 w-1/5">-R$900</span>
+            <span class="w-4/5">Descricao do Gasto</span>
+          </li>
+        </ul>
+      </div>
+      <div class="bg-slate-50 py-10 px-8 md:px-12 rounded-2xl flex flex-col gap-8">
+        <h2 class="text-lg font-semibold">Últimos animais registrados</h2>
+        <ul class="divide-y divide-slate-300">
+          <li class="flex gap-3 p-3">
+            <span class="w-1/4">Tobias</span>
+            <span class="w-1/4">Gato</span>
+            <span class="w-1/4">Adulto</span>
+            <span class="w-1/4">11/04/2024</span>
+          </li>
+          <li class="flex gap-3 p-3">
+            <span class="w-1/4">Pirulito</span>
+            <span class="w-1/4">Cachorro</span>
+            <span class="w-1/4">Filhote</span>
+            <span class="w-1/4">11/04/2024</span>
+          </li>
+          <li class="flex gap-3 p-3">
+            <span class="w-1/4">Madonna</span>
+            <span class="w-1/4">Cachorro</span>
+            <span class="w-1/4">Filhote</span>
+            <span class="w-1/4">11/04/2024</span>
+          </li>
+          <li class="flex gap-3 p-3">
+            <span class="w-1/4">César</span>
+            <span class="w-1/4">Cachorro</span>
+            <span class="w-1/4">Adulto</span>
+            <span class="w-1/4">11/04/2024</span>
+          </li>
+          <li class="flex gap-3 p-3">
+            <span class="w-1/4">Kiara</span>
+            <span class="w-1/4">Gato</span>
+            <span class="w-1/4">Adulto</span>
+            <span class="w-1/4">11/04/2024</span>
+          </li>
+          <li class="flex gap-3 p-3">
+            <span class="w-1/4">Pretinho</span>
+            <span class="w-1/4">Cachorro</span>
+            <span class="w-1/4">Adulto</span>
+            <span class="w-1/4">11/04/2024</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
