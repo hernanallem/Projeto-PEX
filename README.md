@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # FrontEnd - Petx
 
@@ -14,3 +15,6 @@ Um sistema de gerenciamento interno para uma ONG de abrigo animal. O sistema vai
 ![App Screenshot](https://i.imgur.com/qzLMgMt.png)
 
 
+=======
+# BackEnd-Petx
+>>>>>>> f8081a853fd41fbbb32830c6a3e6b5c5dc68afe6
